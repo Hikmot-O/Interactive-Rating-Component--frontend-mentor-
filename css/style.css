@@ -1,0 +1,132 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkblue: hsl(213, 19%, 18%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+  --orange: hsl(25, 97%, 53%);
+}
+body {
+  font-family: "overpass", sans-serif;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 1.5rem;
+  background: var(--veryDarkBlue);
+  color: var(--white);
+}
+
+.card {
+  background: var(--darkblue);
+  width: 35rem;
+  padding: 3.5rem;
+  margin-bottom: 5rem;
+  border-radius: 3rem;
+}
+.star-container {
+  background: rgba(149, 158, 172, 0.1);
+}
+h1 {
+  font-size: 2.8rem;
+  padding: 0;
+  margin-bottom: 1.2rem;
+  margin-top: 3rem;
+}
+p {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--lightGrey);
+  word-spacing: 1px;
+}
+.ratings {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+  color: var(--lightGrey);
+}
+.circle {
+  padding: 1.2rem;
+  border-radius: 100%;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.rating-number {
+  background: rgba(149, 158, 172, 0.15);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.rating-active {
+  background: var(--lightGrey);
+  color: var(--white);
+}
+.rating-number:hover {
+  background-color: var(--orange);
+  color: var(--white);
+  cursor: pointer;
+}
+.btn {
+  width: 100%;
+  background: var(--orange);
+  border-radius: 5rem;
+  padding: 1.4rem 0rem;
+  text-align: center;
+}
+.btn:hover {
+  background: var(--white);
+  cursor: pointer;
+}
+.btn:hover a {
+  color: var(--orange);
+}
+.btn a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--white);
+}
+.thankyou-card {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4.2rem 3.5rem;
+  display: none;
+}
+.thankyou-card p {
+  text-align: center;
+}
+.thankyou-card img {
+  margin-bottom: 3rem;
+}
+.result {
+  text-align: center;
+  color: var(--orange);
+  background: rgba(149, 158, 172, 0.1);
+  padding: 0.5rem 1.5rem;
+  border-radius: 5rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .card {
+    width: auto;
+    margin: 0 1rem;
+  }
+  .rating-number:hover {
+    background: var(--lightGrey);
+  }
+}
